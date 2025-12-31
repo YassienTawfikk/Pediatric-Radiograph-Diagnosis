@@ -1,12 +1,12 @@
-# Pediatric Pneumonia Detection System 🫁
+# Pediatric Pneumonia Detection System
 
 A high-performance deep learning pipeline for detecting pneumonia in pediatric chest X-rays using a fine-tuned **ResNet-50** architecture.
 
 ![Grad-CAM Explanation](https://github.com/user-attachments/assets/af62eaaf-f70c-4042-936a-6b4439fe4a07)
 
-*Figure 1: Grad-CAM visualizations highlighting the regions the model focuses on to make predictions.*
+>*Grad-CAM visualizations highlighting the regions the model focuses on to make predictions.*
 
-## 📊 Key Results
+## Key Results
 
 The model achieves high sensitivity (>93%), which is critical for medical screening to minimize missed cases (false negatives).
 
@@ -28,12 +28,12 @@ The model achieves high sensitivity (>93%), which is critical for medical screen
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 The project is designed to be modular and scalable:
 
 ```text
-├── model_core/             # 🧠 Core Logic Package
+├── model_core/             # Core Logic Package
 │   ├── data_pipeline.py    # Data loading, augmentation, and splitting
 │   ├── model_builder.py    # ResNet-50 architecture definition
 │   ├── trainer.py          # Training loop with callbacks (EarlyStopping, etc.)
@@ -41,20 +41,20 @@ The project is designed to be modular and scalable:
 │   ├── gradcam.py          # Explainable AI (Heatmap generation)
 │   └── utils.py            # Helper functions
 │
-├── notebooks/              # 📓 Jupyter Notebooks
+├── notebooks/              # Jupyter Notebooks
 │   └── Pneumonia Detection Pipeline.ipynb  # Complete end-to-end workflow
 │
-├── scripts/                # 🐍 Execution Scripts
+├── scripts/                # Execution Scripts
 │   ├── train.py            # Script for training the model
 │   └── evaluate.py         # Script for evaluating a trained model
 │
-├── assets/                 # 🖼️ Evaluation Artifacts (Plots & Metrics)
+├── assets/                 # Evaluation Artifacts (Plots & Metrics)
 │
-└── run/                    # 🐚 Shell Scripts
+└── run/                    # Shell Scripts
     └── run.sh              # Helper script for running jobs (Slurm compatible)
 ```
 
-## 🚀 Usage
+## Usage
 
 ### 1. Installation
 
@@ -82,7 +82,7 @@ Evaluate the trained model and generate visualizations:
 python scripts/evaluate.py --model_path outputs/final_pneumonia_model.h5
 ```
 
-## 🧠 Methodology
+## Methodology
 
 ### Data Pipeline
 
@@ -100,3 +100,35 @@ python scripts/evaluate.py --model_path outputs/final_pneumonia_model.h5
 
 1. **Stage 1 (Feature Extraction)**: Backbone frozen, training only the custom head layers (LR: 1e-4).
 2. **Stage 2 (Fine-Tuning)**: Unfreezing the top ~30 layers of ResNet-50 to adapt features to X-ray textures (LR: 1e-5).
+
+---
+
+## Contributors
+
+<div align="center">
+   <table>
+     <tr>
+       <td align="center">
+         <a href="https://github.com/YassienTawfikk" target="_blank">
+           <img src="https://avatars.githubusercontent.com/u/126521373?v=4" width="100px;" alt="Yassien Tawfik"/>
+           <br />
+           <sub><b>Yassien Tawfik</b></sub>
+         </a>
+       </td>
+       <td align="center">
+         <a href="https://github.com/madonna-mosaad" target="_blank">
+           <img src="https://avatars.githubusercontent.com/u/127048836?v=4" width="100px;" alt="Madonna Mosaad"/>
+           <br />
+           <sub><b>Madonna Mosaad</b></sub>
+         </a>
+       </td>
+       <td align="center">
+         <a href="https://github.com/nancymahmoud1" target="_blank">
+           <img src="https://avatars.githubusercontent.com/u/125357872?v=4" width="100px;" alt="Nancy Mahmoud"/>
+           <br />
+           <sub><b>Nancy Mahmoud</b></sub>
+         </a>
+       </td>
+     </tr>
+   </table>
+</div>
