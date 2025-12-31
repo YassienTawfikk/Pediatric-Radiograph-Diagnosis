@@ -1,6 +1,13 @@
 # Pediatric Pneumonia Detection System
 
-A high-performance deep learning pipeline for detecting pneumonia in pediatric chest X-rays using a fine-tuned **ResNet-50** architecture.
+## Overview
+This project implements an end-to-end deep learning pipeline for automatic pneumonia detection from chest X-ray images.  
+The system performs deep learning pipeline for detecting pneumonia in pediatric chest X-rays using a fine-tuned **ResNet-50** architecture.
+## Features
+- Binary classification: NORMAL vs PNEUMONIA
+- Pretrained CNN model (Keras / TensorFlow)
+- Grad-CAM visual explanations
+  
 
 ![Grad-CAM Explanation](https://github.com/user-attachments/assets/af62eaaf-f70c-4042-936a-6b4439fe4a07)
 
@@ -23,7 +30,7 @@ The model achieves high sensitivity (>93%), which is critical for medical screen
 
 | Confusion Matrix | ROC Curve |
 | :---: | :---: |
-| ![Confusion Matrix](https://github.com/user-attachments/assets/6cfdba6e-13ff-4d18-bec9-444242576b45) | ![ROC Curve](https://github.com/user-attachments/assets/8b91ff48-5df1-4c56-9dae-21b92b3a3d12) |
+| ![Confusion Matrix](https://github.com/user-attachments/assets/6cfdba6e-13ff-4d18-bec9-444242576b45) | ![ROC Curve](assets/roc.png) |
 | *Breakdown of TP, TN, FP, FN* | *Trade-off between Sensitivity and False Positive Rate* |
 
 ---
