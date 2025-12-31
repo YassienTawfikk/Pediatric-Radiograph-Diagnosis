@@ -129,6 +129,13 @@ python scripts/evaluate.py --model_path outputs/final_pneumonia_model.h5
            <sub><b>Nancy Mahmoud</b></sub>
          </a>
        </td>
+       <td align="center">
+         <a href="https://github.com/Alyaaa16" target="_blank">
+           <img src="https://avatars.githubusercontent.com/u/62966167?v=4" width="100px;" alt="Eman Emad"/>
+           <br />
+           <sub><b>Eman Emad</b></sub>
+         </a>
+       </td>         
      </tr>
    </table>
 </div>
