@@ -10,10 +10,18 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 from model_core.evaluator import ModelEvaluator
 from model_core.gradcam import GradCAMVisualizer
+import kagglehub
 
-def run_evaluation(model_path, dataset_path, output_dir="evaluation_results"):
+def run_evaluation(model_path, dataset_path=None, output_dir="evaluation_results"):
     """Execute complete evaluation pipeline."""
     print(f"\n{'='*70}\n🚀 EVALUATION & EXPLAINABILITY PIPELINE\n{'='*70}")
+    
+    # Download dataset if path not provided
+    if dataset_path is None:
+        print("\n📥 Downloading dataset from Kaggle...")
+        path = kagglehub.dataset_download("paultimothymooney/chest-xray-pneumonia")
+        dataset_path = os.path.join(path, "chest_xray")
+        print(f"✓ Dataset ready at: {dataset_path}")
     
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
@@ -83,7 +91,7 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Evaluate Pneumonia Detection Model')
     parser.add_argument('--model_path', type=str, required=True, help='Path to trained model (.h5)')
-    parser.add_argument('--dataset_path', type=str, required=True, help='Path to chest X-ray dataset')
+    parser.add_argument('--dataset_path', type=str, default=None, help='Path to chest X-ray dataset (optional, will download if empty)')
     parser.add_argument('--output_dir', type=str, default='evaluation_results', help='Output directory')
     
     args = parser.parse_args()

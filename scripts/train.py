@@ -8,12 +8,21 @@ from model_core.model_builder import ModelBuilder
 from model_core.trainer import Trainer
 from model_core.utils import Utils
 
-def run_pipeline(dataset_path, stage1_epochs=8, stage2_epochs=5, output_dir="outputs"):
+import kagglehub
+
+def run_pipeline(dataset_path=None, stage1_epochs=8, stage2_epochs=5, output_dir="outputs"):
     """
     Execute complete training pipeline.
     """
     print(f"\n{'='*70}\n🚀 PEDIATRIC PNEUMONIA DETECTION PIPELINE\n{'='*70}")
     
+    # Download dataset if path not provided
+    if dataset_path is None:
+        print("\n📥 Downloading dataset from Kaggle...")
+        path = kagglehub.dataset_download("paultimothymooney/chest-xray-pneumonia")
+        dataset_path = os.path.join(path, "chest_xray")
+        print(f"✓ Dataset ready at: {dataset_path}")
+
     # =========================================================================
     # STAGE 0: DATA PREPARATION
     # =========================================================================
@@ -83,7 +92,7 @@ def run_pipeline(dataset_path, stage1_epochs=8, stage2_epochs=5, output_dir="out
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Train Pneumonia Detection Model')
-    parser.add_argument('--dataset_path', type=str, required=True, help='Path to chest X-ray dataset')
+    parser.add_argument('--dataset_path', type=str, default=None, help='Path to chest X-ray dataset (optional, will download if empty)')
     parser.add_argument('--stage1_epochs', type=int, default=8, help='Epochs for stage 1')
     parser.add_argument('--stage2_epochs', type=int, default=5, help='Epochs for stage 2')
     parser.add_argument('--output_dir', type=str, default='outputs', help='Output directory')
