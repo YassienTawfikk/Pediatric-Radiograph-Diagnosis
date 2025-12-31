@@ -2,7 +2,8 @@
 
 A high-performance deep learning pipeline for detecting pneumonia in pediatric chest X-rays using a fine-tuned **ResNet-50** architecture.
 
-![Grad-CAM Explanation](assets/gradcam_batch.png)
+![Grad-CAM Explanation](https://github.com/user-attachments/assets/af62eaaf-f70c-4042-936a-6b4439fe4a07)
+
 *Figure 1: Grad-CAM visualizations highlighting the regions the model focuses on to make predictions.*
 
 ## 📊 Key Results
@@ -22,7 +23,7 @@ The model achieves high sensitivity (>93%), which is critical for medical screen
 
 | Confusion Matrix | ROC Curve |
 | :---: | :---: |
-| ![Confusion Matrix](assets/confusion_matrix.png) | ![ROC Curve](assets/roc_curve.png) |
+| ![Confusion Matrix](https://github.com/user-attachments/assets/6cfdba6e-13ff-4d18-bec9-444242576b45) | ![ROC Curve](https://github.com/user-attachments/assets/8b91ff48-5df1-4c56-9dae-21b92b3a3d12) |
 | *Breakdown of TP, TN, FP, FN* | *Trade-off between Sensitivity and False Positive Rate* |
 
 ---
