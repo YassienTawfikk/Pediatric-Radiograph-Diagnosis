@@ -30,7 +30,7 @@ The model achieves high sensitivity (>93%), which is critical for medical screen
 
 | Confusion Matrix | ROC Curve |
 | :---: | :---: |
-| ![Confusion Matrix](https://github.com/user-attachments/assets/6cfdba6e-13ff-4d18-bec9-444242576b45) | ![ROC Curve](assets/roc.png) |
+| ![Confusion Matrix](https://github.com/user-attachments/assets/6cfdba6e-13ff-4d18-bec9-444242576b45) | ![ROC Curve](assets/download.png) |
 | *Breakdown of TP, TN, FP, FN* | *Trade-off between Sensitivity and False Positive Rate* |
 
 ---
