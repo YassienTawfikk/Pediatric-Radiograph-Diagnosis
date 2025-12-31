@@ -3,6 +3,11 @@
 ## Overview
 This project implements an end-to-end deep learning pipeline for automatic pneumonia detection from chest X-ray images.  
 The system performs deep learning pipeline for detecting pneumonia in pediatric chest X-rays using a fine-tuned **ResNet-50** architecture.
+The model uses a two-stage training process:
+
+Stage 1: Trains the base layers of a pre-trained model.
+Stage 2: Fine-tunes the entire model.
+
 ## Features
 - Binary classification: NORMAL vs PNEUMONIA
 - Pretrained CNN model (Keras / TensorFlow)
@@ -15,22 +20,22 @@ The system performs deep learning pipeline for detecting pneumonia in pediatric 
 
 ## Key Results
 
-The model achieves high sensitivity (>93%), which is critical for medical screening to minimize missed cases (false negatives).
+The model achieves high sensitivity (>94%), which is critical for medical screening to minimize missed cases (false negatives).
 
 | Metric | Value | Interpretation |
 | :--- | :--- | :--- |
-| **Accuracy** | **88.30%** | Overall correctness of predictions. |
-| **Sensitivity (Recall)** | **93.59%** | Ability to correctly identify Pneumonia cases. High sensitivity means few missed diagnoses. |
-| **Specificity** | **79.49%** | Ability to correctly identify Normal cases. |
-| **Precision** | **88.38%** | Reliability of a "Pneumonia" prediction. |
-| **F1-Score** | **90.91%** | Harmonic mean of precision and recall. |
-| **AUC-ROC** | **0.9396** | Excellent discrimination capability vs random guessing. |
+| **Accuracy** | **87.82%** | Overall correctness of predictions. |
+| **Sensitivity (Recall)** | **87.44%** | Ability to correctly identify Pneumonia cases. High sensitivity means few missed diagnoses. |
+| **Specificity** | **88.46%%** | Ability to correctly identify Normal cases. |
+| **Precision** | **92.66%** | Reliability of a "Pneumonia" prediction. |
+| **F1-Score** | **89.97%** | Harmonic mean of precision and recall. |
+| **AUC-ROC** | **0.9407** | Excellent discrimination capability vs random guessing. |
 
 ### Performance Visualizations
 
 | Confusion Matrix | ROC Curve |
 | :---: | :---: |
-| ![Confusion Matrix](https://github.com/user-attachments/assets/6cfdba6e-13ff-4d18-bec9-444242576b45) | ![ROC Curve](assets/download.png) |
+| ![Confusion Matrix](assets/confusion.png) | ![ROC Curve](assets/download.png) |
 | *Breakdown of TP, TN, FP, FN* | *Trade-off between Sensitivity and False Positive Rate* |
 
 ---
