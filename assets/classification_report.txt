@@ -1,0 +1,8 @@
+              precision    recall  f1-score   support
+
+      NORMAL     0.8815    0.7949    0.8360       234
+   PNEUMONIA     0.8838    0.9359    0.9091       390
+
+    accuracy                         0.8830       624
+   macro avg     0.8826    0.8654    0.8725       624
+weighted avg     0.8829    0.8830    0.8817       624
